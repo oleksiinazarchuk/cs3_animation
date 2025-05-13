@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Орбіта Місяця</title>
+  <style>
+    body{
+     margin: 0;
+     padding: 0;
+     background-image: url(https://ybis.ru/wp-content/uploads/2023/09/glize-710-1.webp);
+     background-size: cover;
+
+     }
+    
+    #earth {
+      padding: 100px;
+      position: relative;
+      z-index: 1;
+     }
+    
+    #moon {
+      position: absolute;
+      top: 300px;
+      left: 430px;
+      width: 110px;
+      animation: 5s orbita linear infinite;
+      z-index: 0;
+     }
+     
+     @keyframes orbita {
+         0% {top: 60px; left: 700px; z-index: 2; width: 100px;}
+         25% {top: 300px; left: 430px; width: 125px;}
+         50% {top: 450px; left: 250px; width: 150px;}
+         75% {top: 520px; left: 180px; z-index: 0; width: 125px;}
+         100% {top: 60px; left: 700px; width: 100px; transform: rotate(360deg)}
+      }
+
+
+	
+
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/oJNBfqL.png" id="earth" alt="Earth">
+  <img src="https://i.imgur.com/zbsByE2.png" id="moon" alt="Moon">
+</body>
+</html>
